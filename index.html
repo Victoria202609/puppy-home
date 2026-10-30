@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <title>小金毛的家 · 初版（未完成版）</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="paw" viewBox="0 0 32 32"><ellipse cx="8" cy="10" rx="3" ry="4" transform="rotate(-25 8 10)"/><ellipse cx="15" cy="7" rx="3" ry="4"/><ellipse cx="23" cy="10" rx="3" ry="4" transform="rotate(25 23 10)"/><path d="M7 22c0-4 5-10 9-10s9 6 9 10c0 7-6 3-9 3s-9 4-9-3Z"/></symbol>
+    <symbol id="leaf" viewBox="0 0 24 24"><path d="M19 4C7 3 3 8 6 15c6 5 14-1 13-11Z M5 20l10-11"/></symbol>
+    <symbol id="roll" viewBox="0 0 32 32"><path d="M25 12a10 10 0 1 0 0 10M25 5v7h-7"/><path d="M12 18q4-8 8 0t-8 0"/></symbol>
+    <symbol id="run" viewBox="0 0 32 32"><path d="m11 13 6-4 5 7 6 1M17 10l-3 10-8 7m8-7 7 1 3 7M3 10h6M1 16h7"/><circle cx="20" cy="5" r="2"/></symbol>
+    <symbol id="jump" viewBox="0 0 32 32"><path d="M16 22V5m-6 6 6-6 6 6M6 18l-3-3m23 3 3-3M7 26q9 5 18 0"/></symbol>
+    <symbol id="howl" viewBox="0 0 32 32"><path d="m5 13 8-1 8-6v20l-8-6-8-1ZM10 20l2 7h4l-2-6M25 11q6 5 0 10"/></symbol>
+    <symbol id="rest" viewBox="0 0 32 32"><path d="M23 20A11 11 0 0 1 12 5a11 11 0 1 0 11 15ZM21 6h6l-6 7h6"/></symbol>
+    <symbol id="sound" viewBox="0 0 24 24"><path d="M3 9h4l5-4v14l-5-4H3ZM16 8q5 4 0 8m3-11q8 7 0 14"/></symbol>
+    <symbol id="mute" viewBox="0 0 24 24"><path d="M3 9h4l5-4v14l-5-4H3Zm13 0 6 6m0-6-6 6"/></symbol>
+    <symbol id="paper" viewBox="0 0 32 32"><path d="M18 27H7a2 2 0 0 1-2-2V5h15l6 6v7M20 5v7h6M10 12h5m-5 5h10m-10 5h6m5 3 8-8m-7 0h7v7"/></symbol>
+  </defs></svg>
+  <header class="header">
+    <a class="brand" href="./" aria-label="小金毛的家首页"><span class="brand-icon"><svg><use href="#paw"/></svg></span><span>小金毛的家<small>A LITTLE HOME FOR YOU</small></span></a>
+    <span class="privacy"><svg><use href="#leaf"/></svg>这里只属于你</span>
+  </header>
+  <main>
+    <section class="heading"><div><div class="eyebrow"><span class="version-tag">初版 · 未完成版</span>把外面的世界，暂时放在门外</div><h1>今天，做一只<span>自由的小狗。</span></h1><p>不用乖，也不用急着开心。在这里，怎么待着都可以。</p></div><button class="story-link" id="story-open">读一封回家的信 <span>↗</span></button></section>
+    <section class="room" id="room" aria-label="小金毛的家，点击地面可以走动">
+      <svg class="room-art" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#eee9da"/><stop offset="1" stop-color="#f4eee0"/></linearGradient>
+          <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#e5ccab"/><stop offset="1" stop-color="#f0d9bb"/></linearGradient>
+          <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#c4d8d3"/><stop offset="1" stop-color="#e4e9cf"/></linearGradient>
+          <pattern id="grain" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".6" fill="#847450" opacity=".09"/><circle cx="6" cy="7" r=".4" fill="#847450" opacity=".08"/></pattern>
+        </defs>
+        <path fill="url(#wall)" d="M0 0h1200v540H0z"/>
+        <path fill="url(#floor)" d="M0 338h1200v202H0z"/>
+        <path d="M0 337h1200" stroke="#ceb794" stroke-width="13"/><path d="M0 332h1200" stroke="#f8f1df" stroke-width="8"/>
+        <g stroke="#cba77d" opacity=".3" stroke-width="2"><path d="M0 398h1200M0 478h1200M200 342l-50 198M430 342l-20 198M770 342l20 198M1000 342l50 198M0 363h1200"/><path d="M300 398v80m600 0v62"/></g>
+        <path d="m220 183 156 5 329 249-311 31Z" fill="#fff8d9" opacity=".31"/>
+        <g class="window">
+          <rect x="125" y="61" width="265" height="226" rx="94" fill="#d2b794"/>
+          <path d="M138 273V163a119 89 0 0 1 239 0v110Z" fill="url(#sky)"/>
+          <circle cx="316" cy="126" r="30" fill="#fff5cf"/>
+          <path d="M138 244q60-79 128-18t111-12v59H138Z" fill="#a8bcb0"/><path d="M138 261q86-56 136-10t103-8v30H138Z" fill="#829c83"/>
+          <g fill="#f8f5e8" opacity=".8"><ellipse cx="200" cy="140" rx="36" ry="9"/><ellipse cx="217" cy="134" rx="20" ry="13"/></g>
+          <path d="M257 70v207M134 183h246" stroke="#f7edda" stroke-width="10"/>
+          <rect x="112" y="279" width="292" height="16" rx="5" fill="#bc9a73"/><rect x="109" y="277" width="296" height="9" rx="4" fill="#e5d0ad"/>
+          <path d="M111 58q-13 99 0 220l38-7q-26-100 8-213ZM401 58q13 99 0 220l-37-7q25-100-8-213Z" fill="#f9f5e9"/><path d="M123 61q-12 98 3 201m263-201q12 98-3 201" stroke="#e5decc" fill="none" stroke-width="3"/>
+        </g>
+        <g transform="translate(520 77) rotate(-4)"><rect width="100" height="115" rx="4" fill="#bda380"/><rect x="7" y="7" width="86" height="100" fill="#f9f4e6"/><path d="M25 83q5-31 22-31t28 31" fill="#e6bd73"/><circle cx="49" cy="44" r="15" fill="#e6bd73"/><path d="m35 40-5 16m33-16 5 16" stroke="#bf8d4e" stroke-width="9" stroke-linecap="round"/><circle cx="44" cy="45" r="2" fill="#69513b"/><circle cx="55" cy="45" r="2" fill="#69513b"/><path d="m46 52 4 3 4-3" stroke="#69513b" fill="none" stroke-width="2"/><path d="M34 94h32" stroke="#c7b99c" stroke-width="2"/></g>
+        <g transform="translate(690 110)"><path d="m10 0 30-18L70 0" stroke="#b5a180" fill="none"/><rect y="0" width="80" height="57" rx="4" fill="#e3e5cf" stroke="#c2c5ab" stroke-width="3"/><path d="M22 27q7-14 18 0 11-14 18 0 0 11-18 19-18-8-18-19" fill="#b0bc91"/></g>
+        <g transform="translate(872 132)"><rect x="-15" y="76" width="228" height="12" rx="4" fill="#b89b75"/><path d="M5 88v19m185-19v19" stroke="#b89b75" stroke-width="9"/>
+          <rect x="22" y="24" width="19" height="52" rx="2" fill="#b8bd9b"/><rect x="43" y="15" width="17" height="61" rx="2" fill="#d5ad8f"/><path d="m65 25 16-5 17 51-16 5Z" fill="#e4ca99"/><path d="M25 61h13m9-36h9" stroke="#f7eddb" stroke-width="2"/>
+          <path d="M140 43q-17-37 5-42 17 21 1 42m0 0q1-34 27-25 4 20-27 25" fill="#8d9f78"/><path d="M145 51V20" stroke="#6f825f" stroke-width="3"/><path d="m125 47 7 29h28l7-29Z" fill="#c59172"/><path d="M124 47h44" stroke="#ae785c" stroke-width="5"/>
+        </g>
+        <g transform="translate(965 247)"><ellipse cx="42" cy="157" rx="67" ry="13" fill="#b69367" opacity=".14"/><path d="M36 113q-13-57 1-113m2 101q-3-37 34-64M36 80Q4 52-4 27" fill="none" stroke="#788d68" stroke-width="5"/>
+          <path d="M36 30Q0 17 20-9 50-7 36 30M40 57Q34 19 72 19 79 46 40 57M20 64Q-16 65-16 32 14 28 20 64M51 83Q60 47 92 55 92 85 51 83" fill="#9ba984"/><path d="m8 108 12 48h44l12-48Z" fill="#c79a7a"/><ellipse cx="42" cy="108" rx="34" ry="8" fill="#dab294"/><ellipse cx="42" cy="107" rx="27" ry="5" fill="#937d5c"/>
+        </g>
+        <g transform="translate(78 340)"><ellipse cx="95" cy="65" rx="102" ry="23" fill="#ac906c" opacity=".15"/><path d="M0 43q-3-33 31-37 68-13 123 0 38 5 37 37-1 38-96 38T0 43" fill="#a7ae8e" stroke="#8f9978" stroke-width="3"/><ellipse cx="95" cy="35" rx="76" ry="24" fill="#d8d9bc"/><path d="M40 34q56-24 110 0" fill="none" stroke="#bdc2a1" stroke-width="2"/><path d="m167 14 9 10m-160 9 9 3" stroke="#e7e4cb" stroke-width="3"/></g>
+        <ellipse cx="607" cy="428" rx="257" ry="78" fill="#b69672" opacity=".12"/>
+        <ellipse cx="600" cy="419" rx="256" ry="76" fill="#d9ddbd" stroke="#bac3a0" stroke-width="3"/>
+        <ellipse cx="600" cy="419" rx="237" ry="63" fill="none" stroke="#eef0d6" stroke-width="2"/>
+        <path d="M382 429q210 96 436 0M395 440q205 85 410 0" fill="none" stroke="#c7cfaa" stroke-width="2" opacity=".6"/>
+        <g transform="translate(843 420) rotate(13)"><path d="M0 0c-10-15-23 1-12 9-13 10 2 24 12 11h33c10 13 25-1 12-11 11-8-2-24-12-9Z" fill="#f7edd6" stroke="#c7b493" stroke-width="2"/></g>
+        <g transform="translate(300 445)"><circle r="17" fill="#c88f71"/><path d="M-14-8q14 11 28 0M-3-16q-9 16 4 32" stroke="#efd5b0" stroke-width="3" fill="none"/></g>
+        <path fill="url(#grain)" d="M0 0h1200v540H0z"/>
+      </svg>
+      <div class="room-top"><span class="room-label"><i></i> 我的小小世界</span><div class="sound-controls"><button id="sound-toggle" class="sound-button" aria-label="关闭声音" aria-pressed="true"><svg><use href="#sound"/></svg><span>声音已开</span></button><label class="volume-control"><span class="sr-only">音效音量</span><input id="sound-volume" type="range" min="0" max="100" step="1" value="85" aria-label="音效音量"><output id="sound-volume-value" for="sound-volume">85%</output></label></div></div>
+      <div class="dog-anchor" id="dog-anchor"><div class="dog-traveler"><div class="dog-shadow"></div><div class="dog-motion"><svg class="dog" viewBox="0 0 220 220" aria-label="你的小金毛" role="img">
+        <g class="standing-pose" stroke="#a87943" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
+          <path class="tail" d="M158 155q47-10 31-50-5-10-12 0 0 24-28 27" fill="#e5b567"/>
+          <path d="M73 130q-13 27-8 57l28 5 35-2 26-5q10-37-12-60" fill="#edc17b"/>
+          <ellipse cx="109" cy="162" rx="26" ry="29" fill="#f8dfa7" stroke="none"/>
+          <path d="m77 164-4 28q-20 15 10 16 18 1 17-11l1-26m36-7 5 28q20 15-10 16-18 1-17-11l-1-26" fill="#efc780"/>
+          <path d="M80 192v9m56-9v9" stroke="#cd9b56" stroke-width="2"/>
+          <g class="dog-head">
+            <path d="M64 63q-26 0-30 35-4 38 16 37 17-4 22-40m77-32q26 0 30 35 4 38-16 37-17-4-22-40" fill="#dba75b"/>
+            <path d="M58 88q-1-50 49-51 54-3 54 51l-1 27q-3 35-51 36-47-1-50-34Z" fill="#f1c77f"/>
+            <path d="m94 40 7-12 7 12 12-8 1 11" fill="#f1c77f"/>
+            <path d="M60 86q-12 10-12 34m113-34q12 10 12 34" stroke="#c8934f" fill="none"/>
+            <ellipse cx="108" cy="120" rx="33" ry="24" fill="#fbe5b3" stroke="none"/>
+            <g class="open-eyes" fill="#514432" stroke="none"><ellipse cx="85" cy="94" rx="5" ry="6.5"/><ellipse cx="132" cy="94" rx="5" ry="6.5"/><circle cx="87" cy="92" r="1.6" fill="#fff"/><circle cx="134" cy="92" r="1.6" fill="#fff"/></g>
+            <g class="happy-eyes" fill="none" stroke="#514432"><path d="M79 97q6-9 12 0m35 0q6-9 12 0"/></g>
+            <ellipse cx="72" cy="113" rx="10" ry="5" fill="#e8a080" opacity=".55" stroke="none"/><ellipse cx="146" cy="113" rx="10" ry="5" fill="#e8a080" opacity=".55" stroke="none"/>
+            <path d="M102 110q6-4 13 0 1 7-7 8-7-1-6-8" fill="#594736" stroke="none"/>
+            <path class="smile" d="M96 122q6 9 12 0 6 9 13 0" fill="none" stroke="#6c4d32" stroke-width="2.7"/>
+            <path class="tongue" d="M102 128v7q7 10 13 0v-7" fill="#df9b8b" stroke="#b8786a" stroke-width="2"/>
+            <ellipse class="howl-mouth" cx="109" cy="127" rx="8" ry="10" fill="#76513a" stroke="none"/>
+          </g>
+        </g>
+        <g class="resting-pose" stroke="#a87943" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path class="tail" d="M157 172q49-28 33-44-10-4-12 12l-32 13" fill="#e5b567"/>
+          <ellipse cx="122" cy="176" rx="61" ry="28" fill="#edc17b"/><ellipse cx="59" cy="198" rx="30" ry="10" fill="#f4d392"/><ellipse cx="123" cy="198" rx="30" ry="10" fill="#f4d392"/>
+          <path d="M43 143q-4-39 44-39 46 0 47 39v27q-2 28-45 28-44 0-46-28Z" fill="#f1c77f"/>
+          <path d="M46 128q-24 6-22 41 3 28 19 16l13-35m72-22q24 6 22 41-3 28-19 16l-13-35" fill="#dba75b"/>
+          <ellipse cx="88" cy="176" rx="27" ry="17" fill="#fbe5b3" stroke="none"/><path d="M62 160q8 6 15 0m23 0q8 6 15 0" fill="none" stroke="#514432"/>
+          <path d="M82 172q6-4 13 0-1 8-7 8t-6-8" fill="#594736" stroke="none"/><path d="M80 183q8 4 16 0" fill="none" stroke-width="2"/>
+        </g>
+      </svg></div></div><div class="dog-emote" id="dog-emote" aria-hidden="true"></div></div>
+      <div class="room-caption" id="room-caption" aria-live="polite">现在的你，只是一只没有待办事项的小狗。</div>
+      <span class="room-hint">轻点地面，去你想去的地方</span>
+      <div class="paper-stage" id="paper-stage" aria-hidden="true" hidden>
+        <svg class="paper-window" viewBox="0 0 150 180"><defs><clipPath id="paper-sky-clip"><path d="M12 165V68a63 57 0 0 1 126 0v97Z"/></clipPath></defs><path d="M6 169V66a69 63 0 0 1 138 0v103Z" fill="#b99c73"/><g clip-path="url(#paper-sky-clip)"><path fill="#c7deda" d="M10 8h130v160H10z"/><circle cx="106" cy="48" r="19" fill="#fff3c8"/><path d="M0 145q40-57 80-12t80-10v48H0" fill="#a5bd9f"/><path d="M0 160q55-39 94-13t65-8v40H0" fill="#7e9e83"/><path d="M25 74h35m28 21h28" stroke="#f8f8e8" stroke-width="6" stroke-linecap="round"/><path id="paper-distant-trail" d="M80 140q-35-40 12-74" fill="none" stroke="#fff7df" stroke-width="2" stroke-dasharray="4 6"/></g><path d="M6 169V66a69 63 0 0 1 138 0v103M5 171h140" fill="none" stroke="#ead7b5" stroke-width="8"/><path d="m9 53-16-9v127l16-6m132-112 16-9v127l-16-6" fill="#f7edda" stroke="#c9b38c" stroke-width="3"/></svg>
+        <div class="paper-sheet" id="paper-sheet"><span>那些不开心，<br>先放在纸上。</span><i></i><i></i><i></i><svg><use href="#paw"/></svg></div>
+        <svg class="paper-ball" id="paper-ball" viewBox="0 0 60 60"><path d="m15 7 22-3 15 15 3 20-15 16-23-2L5 37 7 19Z" fill="#fff9e7" stroke="#c5b99b" stroke-width="1.5"/><path d="m15 7 8 17 14-20-1 24 16-9-8 17 11 3-20 4 5 12-16-13-7 11 2-21L5 37l18-13m13 4 8 8-9 7-16-11 17-4" fill="none" stroke="#d7cbb0" stroke-width="1.5"/><path d="m23 24 13 4-17 4Z" fill="#e5d9bf"/></svg>
+        <span class="paper-pop" id="paper-pop">咻——！</span>
+      </div>
+      <div class="paper-result" id="paper-result" hidden><div><strong>这一团，已经飞远啦。</strong><span>不必马上释怀，先让自己歇一小会儿。</span></div><div class="paper-result-actions"><button id="paper-again">再写一张</button><button id="paper-done">回到小屋</button></div></div>
+    </section>
+    <section class="activities" aria-labelledby="activity-title"><div class="activity-heading"><h2 id="activity-title">现在，想做点什么？</h2><span>随心选，没有正确答案</span></div>
+      <div class="action-grid">
+        <button class="action-card" data-action="roll" aria-pressed="false"><span class="action-icon"><svg><use href="#roll"/></svg></span><strong>撒个泼</strong><small>打个滚，管它呢</small><span class="action-dot"></span></button>
+        <button class="action-card" data-action="run" aria-pressed="false"><span class="action-icon"><svg><use href="#run"/></svg></span><strong>撒腿疯跑</strong><small>让风追不上我</small><span class="action-dot"></span></button>
+        <button class="action-card" data-action="jump" aria-pressed="false"><span class="action-icon"><svg><use href="#jump"/></svg></span><strong>蹦跶一下</strong><small>地心引力，等一下</small><span class="action-dot"></span></button>
+        <button class="action-card" data-action="howl" aria-pressed="false"><span class="action-icon"><svg><use href="#howl"/></svg></span><strong>嗷呜——</strong><small>想说的，都喊出来</small><span class="action-dot"></span></button>
+        <button class="action-card" data-action="rest" aria-pressed="false"><span class="action-icon"><svg><use href="#rest"/></svg></span><strong>趴一会儿</strong><small>什么都不做也很好</small><span class="action-dot"></span></button>
+        <button class="action-card paper-entry" id="paper-open" aria-haspopup="dialog"><span class="action-icon"><svg><use href="#paper"/></svg></span><strong>踢走烦恼</strong><small>写下来，踢得远远的</small><span class="paper-new">新玩法</span></button>
+      </div>
+      <div class="activity-bottom"><span id="activity-note" aria-live="polite">不想选也没关系，待着就很好。</span><button id="stop" disabled><span>Ⅱ</span> 停下来，缓一缓</button></div>
+    </section>
+  </main>
+  <footer><span>一间小屋。一只小狗。一个可以自在的你。</span><button id="leave">今天先到这里 <span>↗</span></button></footer>
+  <dialog id="welcome"><div class="letter"><span class="letter-paw"><svg><use href="#paw"/></svg></span><div class="eyebrow">一封留给你的信</div><h2>你醒啦，<br>小小金毛。</h2><p>现在，你回到了自己的家。<br>把外面的声音，轻轻留在门外。</p><p>在这里，不用乖，也不用急着开心。<br>想跑就跑，想打滚就打滚。<br>累了，就趴一会儿吧。</p><button class="primary-button" id="enter">好呀，回家 <span>→</span></button><small>这里没有要完成的事，只有属于你的时间。</small></div></dialog>
+  <dialog id="goodbye"><div class="letter"><span class="letter-paw"><svg><use href="#leaf"/></svg></span><div class="eyebrow">想回来时，随时回来</div><h2>小屋会在这里。</h2><p>不需要变得更好，才能离开。<br>带着现在的心情，也可以。<br>你可以安心关掉页面了。</p><button class="primary-button" id="return">再待一会儿 <span>→</span></button></div></dialog>
+  <dialog id="paper-dialog" aria-labelledby="paper-title"><form id="paper-form" class="paper-letter"><button type="button" class="paper-close" id="paper-close" aria-label="关上纸条">×</button><div class="eyebrow">烦恼纸条 · 写下来，再踢走</div><h2 id="paper-title">这一次，不用憋着。</h2><p>讨厌的人、委屈的事、喘不过气的压力……<br>乱七八糟地写也可以，这张纸接得住。</p><label class="paper-input-label" for="worry-text">现在最想吐槽的事</label><div class="writing-paper"><textarea id="worry-text" maxlength="1000" placeholder="今天让我很烦的是……" spellcheck="false" autocomplete="off" aria-describedby="paper-privacy" autofocus></textarea><span id="paper-count">0 / 1000</span></div><p id="paper-privacy" class="paper-privacy">只在这张纸上，不保存、不上传。关上就清空。</p><button type="submit" class="primary-button" id="paper-submit" disabled>揉成一团，踢走！ <span>↗</span></button><button type="button" id="paper-later" class="paper-later">还不想踢，先回小屋</button></form></dialog>
+  <script src="sound.js"></script>
+  <script src="app.js"></script>
+  <script src="paper.js"></script>
+  <script type="module" src="puppy3d.js"></script>
+</body>
+</html>
